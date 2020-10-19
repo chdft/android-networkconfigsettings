@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <bool name="is_settingmap_known">false</bool>
+    <string-array name="connecivity_check_server_settings_http" tools:ignore="InconsistentArrays">
+        <item>config_networkCaptivePortalServerUrl</item>
+        <item>networkCaptivePortalServerUrl</item>
+        <item>captive_portal_http_url</item>
+        <item>captive_portal_server</item>
+    </string-array>
+    <string-array name="connecivity_check_server_settings_https" tools:ignore="InconsistentArrays">
+        <item>captive_portal_https_url</item>
+    </string-array>
+    <string-array name="ntp_server_settings" tools:ignore="InconsistentArrays">
+        <item>ntp_server</item>
+    </string-array>
+</resources>

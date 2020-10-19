@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Netzwerkdiensteinstellungen</string>
+    <string name="save_settings">Speichern</string>
+    <string name="load_settings">Laden</string>
+    <string name="known_server_description">Die unten stehnde Liste enthält dem Entwickler dieser App bekannte Server, welcher als Verbindungstestserver geeignet sind (stets HTTP Statuscode 204 senden). Das Vorkommen in dieser Liste bedeutet nicht, dass der Server stets erreichbar ist oder eine gute Wahl ist (z.B. Anfragen nicht speichert). Die List ist Teil des App-Paktes und kann daher nur mit der App zusammen aktualisiert werden.</string>
+    <string name="known_servers_header">Bekannte Server</string>
+    <string name="ncc_server_url_http_hint">Netzwerkverbindungstest HTTP URL (leer lassen für System-Standard)</string>
+    <string name="ncc_server_url_https_hint">Netzwerkverbindungstest HTTPS URL (leer lassen für System-Standard)</string>
+    <string name="ncc_server_use_description">Der Netzwerkverbindungstestserver wird kontaktiert um festzustellen, ob das Gerät über ein gegebenes Netzwerk eine Internetverbindung hat. Dies passiert in der Regel direkt nach Änderungen in der Netzwerkverbindung des Geräts (z.B. beim Wechsel von LTE zu Wifi). Der Server sollte HTTP Statuscode 204 auf alle Anfragen senden.</string>
+    <string-array name="known_ncc_servers_title">
+        <item>System-Standard</item>
+        <item>Google</item>
+        <item>ChDF T (der Entwickler dieser App) Server</item>
+        <item>ChDF T (der Entwickler dieser App) Server (Absichtlicher Fehlercode)</item>
+    </string-array>
+    <string-array name="known_ncc_servers_description">
+        <item>Verwendet den System-Standard Server (setzt eine leere Zeichenfolge als Server).</item>
+        <item>Server, welcher von AOSP als Standard verwendet wird, wenn der OEM und Benutzer keinen anderen setzen.</item>
+        <item>Ein Server welcher vom App Entwickler zu testzwecken bereitgestellt wird (und nicht von Google betrieben wird).</item>
+        <item>Ein Server welcher vom App Entwickler zu testzwecken bereitgestellt wird (und nicht von Google betrieben wird), welcher stets einen Fehlercode sendet. Dieser Server kann verwendet werden um zu testen, ob die App die Systemeinstellung auf diesem Gerät erfolgreich ändern kann (sofern die App funktioniert, sollte Android "keine Internetverbindung" melden, selbst wenn eine Internetverbindung vorhanden, solange dieser Server ausgewählt ist). Dieser Server ist aus offensichtlichen Gründen nicht für die Verwendung in non-Test-Situationen geeignet.</item>
+    </string-array>
+    <string name="settingsmap_reliable">Diese App funktioniert vermutlich mit dieser Android-Version. Manche OEMs und ROM Entwickler verändern allerdings den Code, welcher den Verbindungstest durchführt. Es wird dringend Empfohlen selbst zu testen, ob die App korrekt funktioniert.</string>
+    <string name="settingsmap_unreliable">Diese App wurde bisher mit dieser Android-Version nicht erfolgreich verifiziert. Beim speichern des Servers werden daher alle Einstellungen gesetzt, welche bekannter maßen bei manchen ROMs und Android-Versionen für den Verbindungstest verwendet werden. Es ist daher möglich, dass diese App trotzdem funktioniert. Es wird daher dringend emfohlen selbst zu testen, ob die Einstellungen tatsächlich vom System verwendet werden.\nWenn Ihnen der Einstellungsschlüssel bekannt ist, welcher für den Verbindungstest verwendet wird, kontaktieren Sie bitte den Entwickler, damit dieser einprogrammiert werden kann.</string>
+    <string name="no_root_header">Kein Root-Zugriff</string>
+    <string name="section_networkconnectivitycheck">Netzwerkverbindungstest</string>
+    <string name="section_ntp">NTP (Netzwerk Zeit)</string>
+    <string name="section_agps">Unterstütztes GNSS</string>
+    <string name="no_root_description">Es ist nicht gelungen eine Root-Shell zu öffnen. Android stellt keine normale API zum ändern des System GLOBAL Einstellungsspeichers bereit, es ist daher eine Root-Shell zum setzen der Einstellungen erforderlich.</string>
+    <string name="no_root_corrective_action">Stellen Sie sicher, dass dieser App der Root-Zugriff gestattet ist. Da diese App freie Software ist, können Sie den Source Code kontrollieren, bevor Sie dies tun.</string>
+    <string name="restart_app">App neustarten</string>
+</resources>
