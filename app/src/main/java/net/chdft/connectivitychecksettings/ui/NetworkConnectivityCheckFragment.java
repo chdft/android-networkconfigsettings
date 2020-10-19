@@ -194,7 +194,7 @@ public class NetworkConnectivityCheckFragment extends Fragment {
         }
 
         public void updateData(){
-            titles = getResources().getStringArray(R.array.known_servers_title);
+            titles = getResources().getStringArray(R.array.known_ncc_servers_title);
             urlsHttp=getResources().getStringArray(R.array.known_ncc_servers_url_http);
             urlsHttps=getResources().getStringArray(R.array.known_ncc_servers_url_https);
             descriptions=getResources().getStringArray(R.array.known_ncc_servers_description);

@@ -22,7 +22,7 @@ import java.util.Objects;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.section_networkconnectivitycheck};
+    private static final int[] TAB_TITLES = new int[]{R.string.section_networkconnectivitycheck, R.string.section_ntp};
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {

@@ -64,9 +64,9 @@ public class NtpFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_network_connectivity_check, container, false);
+        View view = inflater.inflate(R.layout.fragment_network_time, container, false);
 
-        server =view.findViewById(R.id.editTextTextServerUrlHttp);
+        server =view.findViewById(R.id.editTextTextServerUrl);
 
 
         knownServersList=view.findViewById(R.id.recycleViewServersList);

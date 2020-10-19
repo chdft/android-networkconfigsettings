@@ -7,4 +7,7 @@
     <string-array name="connecivity_check_server_settings_https" tools:ignore="InconsistentArrays">
         <item>captive_portal_https_url</item>
     </string-array>
+    <string-array name="ntp_server_settings" tools:ignore="InconsistentArrays">
+        <item>ntp_server</item>
+    </string-array>
 </resources>

@@ -6,13 +6,18 @@
     <string name="no_root_header">No Root Access</string>
     <string name="no_root_description">This app was no able to acquire a root shell. Since Android does not provide a proper API to modify the system settings GLOBAL store, a root shell is required for this app to function.</string>
     <string name="no_root_corrective_action">If your device is rooted, please grant this app root access. Since this app is Free Software, you may audit the source code before doing so.</string>
-    <string name="ncc_server_use_description"><![CDATA[The connectivity test server is contacted to check if a network has internet connectivity. This usually happens every time the used network interface changes (for example LTE -> Wifi). The server is expected to retrun HTTP status-code 204.]]></string>
-    <string name="ncc_server_url_http_hint">Connectivity Test HTTP Server Url (empty for default)</string>
-    <string name="ncc_server_url_https_hint">Connectivity Test HTTPS Server Url (empty for default)</string>
     <string name="known_servers_header">Known Servers</string>
     <string name="known_server_description">The following list contains servers which are known to the developer of this app to function as connectivity check server (meaning they reliably return status 204). Inclusion in this list does not constitute a recommendation and no additional checks (for example not logging requests) are performed. Since the list is hard-coded in the application package, it can only be updated, when the app is updated.</string>
     <string name="save_settings">Save</string>
     <string name="load_settings">Load</string>
+    <string name="settingsmap_reliable">This app has been successfully tested on this Android version. Some OEMs/ROM developers do however modify the code responsible for connectivity tests. Please test if this app actually works with your rom before relying on it.</string>
+    <string name="settingsmap_unreliable">This app has not been successfully tested on this Android version. When you save the setting, this app will set all settings keys which are known to be used by some ROMs and Android versions. As a result, it may work, even if it has not been verified by a developer yet. Please test if this app actually works with your rom before relying on it.\n If you know the settings-key which should be used on your ROM/Android version please contact the app developer.</string>
+    <string name="restart_app">Restart App</string>
+
+    <!-- NCC -->
+    <string name="ncc_server_use_description"><![CDATA[The connectivity test server is contacted to check if a network has internet connectivity. This usually happens every time the used network interface changes (for example LTE -> Wifi). The server is expected to retrun HTTP status-code 204.]]></string>
+    <string name="ncc_server_url_http_hint">Connectivity Test HTTP Server Url (empty for default)</string>
+    <string name="ncc_server_url_https_hint">Connectivity Test HTTPS Server Url (empty for default)</string>
     <string-array name="known_ncc_servers_url_http" translatable="false">
         <item />
         <item>http://connectivitycheck.gstatic.com/generate_204</item>
@@ -37,6 +42,10 @@
         <item>A non-Google Server provided by the developer of this app for testing purposes.</item>
         <item>A non-Google Server provided by the developer of this app for testing purposes, which always returns a failure code. You may use this server to test, if this app actually works on your device by checking if Android reports "no internet" even when really connected to the internet while this server is configured. This server is obviously not recommended for permanent use (Android does not perform background syncs while "no internet" is detected).</item>
     </string-array>
+
+    <!-- NTP -->
+    <string name="ntp_server_use_description">The NTP server is used to get a reliable real-time timestamp without user interaction. Synchronization is periodically performed to avoid clock drift due to imperfect hardware, though some devices prefer GNSS for this purpose.</string>
+    <string name="ntp_server_url_hint">NTP server Name (FQDN or IP; empty for default)</string>
     <string name="known_ntp_server_description">The following list contains servers which are known to the developer of this app to function as network time servers. Inclusion in this list does not constitute a recommendation and no additional checks (for example not logging requests) are performed. Since the list is hard-coded in the application package, it can only be updated, when the app is updated.</string>
     <string-array name="known_ntp_servers_url" translatable="false">
         <item />
@@ -50,8 +59,6 @@
         <item>Uses the system-default server (sets empty string as preference value).</item>
         <item>Default server used by AOSP, if no other server was configured by the OEM or user.</item>
     </string-array>
-    <string name="settingsmap_reliable">This app has been successfully tested on this Android version. Some OEMs/ROM developers do however modify the code responsible for connectivity tests. Please test if this app actually works with your rom before relying on it.</string>
-    <string name="settingsmap_unreliable">This app has not been successfully tested on this Android version. When you save the setting, this app will set all settings keys which are known to be used by some ROMs and Android versions. As a result, it may work, even if it has not been verified by a developer yet. Please test if this app actually works with your rom before relying on it.\n If you know the settings-key which should be used on your ROM/Android version please contact the app developer.</string>
-    <string name="restart_app">Restart App</string>
+
 
 </resources>
