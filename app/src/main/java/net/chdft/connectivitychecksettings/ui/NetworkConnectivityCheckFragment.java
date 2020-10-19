@@ -1,5 +1,6 @@
 package net.chdft.connectivitychecksettings.ui;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -10,6 +11,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -110,10 +114,28 @@ public class NetworkConnectivityCheckFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        inflater.inflate(R.menu.top_level, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.about:
+                Intent aboutIntent = new Intent(getContext(), LicensesActivity.class);
+                startActivity(aboutIntent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     protected SettingsProvider getSettingsProvider(){
         if(settingsProvider==null){
-            if(Objects.requireNonNull(getContext()).checkSelfPermission("android.permission.WRITE_SECURE_SETTINGS") == PackageManager.PERMISSION_GRANTED){
-                settingsProvider = new ApiSettingsProvider(getContext().getContentResolver());
+            if(requireContext().checkSelfPermission("android.permission.WRITE_SECURE_SETTINGS") == PackageManager.PERMISSION_GRANTED){
+                settingsProvider = new ApiSettingsProvider(requireContext().getContentResolver());
             }else {
                 settingsProvider = new ShellSettingsProvider();
             }

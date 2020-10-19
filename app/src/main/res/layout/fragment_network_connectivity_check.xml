@@ -42,7 +42,7 @@ tools:context=".ui.NetworkConnectivityCheckFragment">
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/textView3"
+    app:layout_constraintTop_toBottomOf="@+id/textViewLicenseName"
     tools:listitem="@layout/recycler_view_item_ncc_server" />
 
 <TextView
@@ -58,7 +58,7 @@ tools:context=".ui.NetworkConnectivityCheckFragment">
     app:layout_constraintTop_toBottomOf="@+id/buttonSaveSettings" />
 
 <TextView
-    android:id="@+id/textView3"
+    android:id="@+id/textViewLicenseName"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:text="@string/known_server_description"

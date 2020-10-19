@@ -29,4 +29,5 @@
     <string name="no_root_description">Es ist nicht gelungen eine Root-Shell zu öffnen. Android stellt keine normale API zum ändern des System GLOBAL Einstellungsspeichers bereit, es ist daher eine Root-Shell zum setzen der Einstellungen erforderlich.</string>
     <string name="no_root_corrective_action">Stellen Sie sicher, dass dieser App der Root-Zugriff gestattet ist. Da diese App freie Software ist, können Sie den Source Code kontrollieren, bevor Sie dies tun.</string>
     <string name="restart_app">App neustarten</string>
+    <string name="about_menueitem">Über</string>
 </resources>

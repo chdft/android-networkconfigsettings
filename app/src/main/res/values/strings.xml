@@ -60,5 +60,10 @@
         <item>Default server used by AOSP, if no other server was configured by the OEM or user.</item>
     </string-array>
 
+    <!-- Licenses/About -->
+    <string name="title_activity_licenses">About</string>
+    <string name="about_menueitem">About</string>
+    <string name="libraries_header">Libraries</string>
+
 
 </resources>

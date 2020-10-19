@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="licenses_libraryname">
+        <item>Material Icons</item>
+    </string-array>
+    <string-array name="licenses_licensename">
+        <item>Apache 2.0</item>
+    </string-array>
+    <string-array name="licenses_licenselink">
+        <item>https://github.com/google/material-design-icons/blob/master/LICENSE</item>
+    </string-array>
+    <string-array name="licenses_librarylink">
+        <item>https://github.com/google/material-design-icons</item>
+    </string-array>
+    <string-array name="licenses_use">
+        <item>Used as basis for the app icon.</item>
+    </string-array>
+</resources>
