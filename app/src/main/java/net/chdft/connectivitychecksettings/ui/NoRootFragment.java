@@ -17,6 +17,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.jaredrummler.android.shell.Shell;
+
 import net.chdft.connectivitychecksettings.R;
 
 import java.util.Objects;
@@ -57,17 +59,17 @@ public class NoRootFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_no_root, container, false);
+        ((Button)view.findViewById(R.id.buttonAquirePermissions)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                attemptAquirePermissionsShell();
+                restartApp();
+            }
+        });
         ((Button)view.findViewById(R.id.buttonRestart)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mStartActivity = new Intent(getContext(), SwitcherActivity.class);
-                int mPendingIntentId = 123456;
-                PendingIntent mPendingIntent = PendingIntent.getActivity(getContext(), mPendingIntentId, mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
-                AlarmManager mgr = (AlarmManager) requireContext().getSystemService(Context.ALARM_SERVICE);
-                if(mgr != null) {
-                    mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
-                }
-                System.exit(0);
+                restartApp();
             }
         });
         return view;
@@ -89,5 +91,20 @@ public class NoRootFragment extends Fragment {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void attemptAquirePermissionsShell(){
+        Shell.SU.run("pm grant net.chdft.connectivitychecksettings android.permission.WRITE_SECURE_SETTINGS");
+    }
+
+    private void restartApp(){
+        Intent mStartActivity = new Intent(getContext(), SwitcherActivity.class);
+        int mPendingIntentId = 123456;
+        PendingIntent mPendingIntent = PendingIntent.getActivity(getContext(), mPendingIntentId, mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
+        AlarmManager mgr = (AlarmManager) requireContext().getSystemService(Context.ALARM_SERVICE);
+        if(mgr != null) {
+            mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
+        }
+        System.exit(0);
     }
 }

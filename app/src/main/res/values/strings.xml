@@ -4,8 +4,8 @@
     <string name="section_ntp">NTP (Network Time)</string>
     <string name="section_agps">Assisted GNSS</string>
     <string name="no_root_header">No Root Access</string>
-    <string name="no_root_description">This app was no able to acquire a root shell. Since Android does not provide a proper API to modify the system settings GLOBAL store, a root shell is required for this app to function.</string>
-    <string name="no_root_corrective_action">If your device is rooted, please grant this app root access. Since this app is Free Software, you may audit the source code before doing so.</string>
+    <string name="no_root_description">This app was no able to acquire a root shell. The API to modify the system settings GLOBAL store is only available to privileged apps (installed by the ROM author) by default. This app uses said API if the OS permits it and tries a root-shell as workaround.</string>
+    <string name="no_root_corrective_action">The following solutions are known: (1) You may grant this app the WRITE_SECURE_SETTINGS permission manually by running \"pm grant net.chdft.connectivitychecksettings android.permission.WRITE_SECURE_SETTINGS\" in a shell (for example over adb or a local privileged terminal emulator). (2) Grant this app root access. This is usually done throguh a management app provided by your ROM, but the process may vary from ROM to ROM. Since this app is Free Software, you may audit the source code before doing so. (3) Install this app as privileged app in /system/app instead of /data/app</string>
     <string name="known_servers_header">Known Servers</string>
     <string name="known_server_description">The following list contains servers which are known to the developer of this app to function as connectivity check server (meaning they reliably return status 204). Inclusion in this list does not constitute a recommendation and no additional checks (for example not logging requests) are performed. Since the list is hard-coded in the application package, it can only be updated, when the app is updated.</string>
     <string name="save_settings">Save</string>
@@ -33,8 +33,8 @@
     <string-array name="known_ncc_servers_title">
         <item>System Default</item>
         <item>Google</item>
-        <item>ChDF T (This app developer) Server</item>
-        <item>ChDF T (This app developer) Server (Intentionally Failing)</item>
+        <item>ChDF T\'s Server</item>
+        <item>ChDF T\'s Server (Intentionally Failing)</item>
     </string-array>
     <string-array name="known_ncc_servers_description">
         <item>Uses the system-default server (sets empty string as preference value).</item>
@@ -50,20 +50,24 @@
     <string-array name="known_ntp_servers_url" translatable="false">
         <item />
         <item>time.android.com</item>
+        <item>0.pool.ntp.org</item>
     </string-array>
     <string-array name="known_ntp_servers_title">
         <item>System Default</item>
         <item>Google</item>
+        <item>NTP Pool Project</item>
     </string-array>
     <string-array name="known_ntp_servers_description">
         <item>Uses the system-default server (sets empty string as preference value).</item>
         <item>Default server used by AOSP, if no other server was configured by the OEM or user.</item>
+        <item>This server is operated by the NTP Pool Project (https://www.ntppool.org), which provides free access to well-synchronized NTP servers. Servers hosted by this organization are commonly used as default servers in embedded hardware.</item>
     </string-array>
 
     <!-- Licenses/About -->
     <string name="title_activity_licenses">About</string>
     <string name="about_menueitem">About</string>
     <string name="libraries_header">Libraries</string>
+    <string name="attempt_to_aquire_permissions">Attempt to Aquire Permissions permanently (requires root)</string>
 
 
 </resources>

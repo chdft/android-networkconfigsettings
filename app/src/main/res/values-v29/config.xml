@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <bool name="is_settingmap_known">true</bool>
+    <string-array name="connecivity_check_server_settings_http" tools:ignore="InconsistentArrays">
+        <item>captive_portal_http_url</item>
+        <!-- used by https://github.com/ResurrectionRemix/android_frameworks_base/blob/3962f678c3559ee62bcfd81d353af5d86a32622e/packages/NetworkStack/src/com/android/server/connectivity/NetworkMonitor.java#L1223 -->
+        <item>captive_portal_fallback_url</item>
+        <item>captive_portal_other_fallback_urls</item>
+    </string-array>
+    <string-array name="connecivity_check_server_settings_https" tools:ignore="InconsistentArrays">
+        <item>captive_portal_https_url</item>
+    </string-array>
+    <string-array name="ntp_server_settings" tools:ignore="InconsistentArrays">
+        <item>ntp_server</item>
+    </string-array>
+</resources>

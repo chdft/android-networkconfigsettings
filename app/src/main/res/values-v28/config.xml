@@ -3,6 +3,8 @@
     <bool name="is_settingmap_known">true</bool>
     <string-array name="connecivity_check_server_settings_http" tools:ignore="InconsistentArrays">
         <item>captive_portal_http_url</item>
+        <item>captive_portal_fallback_url</item>
+        <item>captive_portal_other_fallback_urls</item>
     </string-array>
     <string-array name="connecivity_check_server_settings_https" tools:ignore="InconsistentArrays">
         <item>captive_portal_https_url</item>

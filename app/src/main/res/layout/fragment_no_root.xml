@@ -24,6 +24,12 @@
         android:textStyle="italic" />
 
     <Button
+        android:id="@+id/buttonAquirePermissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/attempt_to_aquire_permissions" />
+
+    <Button
         android:id="@+id/buttonRestart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

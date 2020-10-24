@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <bool name="is_settingmap_known">false</bool>
+    <!-- this array should contain all keys contained in the version/ROM specific config -->
     <string-array name="connecivity_check_server_settings_http" tools:ignore="InconsistentArrays">
         <item>config_networkCaptivePortalServerUrl</item>
         <item>networkCaptivePortalServerUrl</item>
         <item>captive_portal_http_url</item>
         <item>captive_portal_server</item>
+        <item>captive_portal_fallback_url</item>
+        <item>captive_portal_other_fallback_urls</item>
     </string-array>
     <string-array name="connecivity_check_server_settings_https" tools:ignore="InconsistentArrays">
         <item>captive_portal_https_url</item>

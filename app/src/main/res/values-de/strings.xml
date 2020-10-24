@@ -27,7 +27,19 @@
     <string name="section_ntp">NTP (Netzwerk Zeit)</string>
     <string name="section_agps">Unterstütztes GNSS</string>
     <string name="no_root_description">Es ist nicht gelungen eine Root-Shell zu öffnen. Android stellt keine normale API zum ändern des System GLOBAL Einstellungsspeichers bereit, es ist daher eine Root-Shell zum setzen der Einstellungen erforderlich.</string>
-    <string name="no_root_corrective_action">Stellen Sie sicher, dass dieser App der Root-Zugriff gestattet ist. Da diese App freie Software ist, können Sie den Source Code kontrollieren, bevor Sie dies tun.</string>
+    <string name="no_root_corrective_action">Die folgenden Lösungsmöglichkeiten sind bekannt: (1) Genehmigen Sie die Verwendung der WRITE_SECURE_SETTINGS Berechtigung manuell, indem Sie den Befehl \"pm grant net.chdft.connectivitychecksettings android.permission.WRITE_SECURE_SETTINGS\" in einer Shell (z.B. über ADB oder eine lokale privilegierte Terminal App) ausführen. (2) Genehmigen Sie die Verwendung einer root-Shell. Root-Zugriff wird in der Regel über eine vorinstallierte App verwaltet, die genaue Vorgehensweise variiert aber von ROM zu ROM. Da diese App freie Software ist, können Sie den Source Code kontrollieren, bevor Sie dies tun. (3) Installieren Sie diese App als priviligierte App in /system/app anstelle von /data/app</string>
     <string name="restart_app">App neustarten</string>
     <string name="about_menueitem">Über</string>
+    <string name="libraries_header">Bibliotheken</string>
+    <string name="title_activity_licenses">Über</string>
+    <string name="known_ntp_server_description">Die unten stehnde Liste enthält dem Entwickler dieser App bekannte Server, welcher als NTP-Server geeignet sind. Das Vorkommen in dieser Liste bedeutet nicht, dass der Server stets erreichbar ist oder eine gute Wahl ist (z.B. Anfragen nicht speichert). Die List ist Teil des App-Paktes und kann daher nur mit der App zusammen aktualisiert werden.</string>
+    <string name="ntp_server_url_hint">NTP-Servername (FQDN oder IP; leer lassen für System-Standard)</string>
+    <string name="ntp_server_use_description">Der NTP-Server wird verwendet um eine zuverlässige Uhrzeit ohne Nutzereingaben zu erhalten. Die Synchronisation wird periodisch im Hintergrund durchgeführt um kleine Abweichungen der Hardware-Uhr auszugleichen. Manche Geräte verwenden für diesen Zweck allerdings bevorzug GNSS.</string>
+    <string-array name="known_ntp_servers_description">
+        <item>Verwendet den System-Standard Server (setzt eine leere Zeichenfolge als Server).</item>
+        <item>Server, welcher von AOSP als Standard verwendet wird, wenn der OEM und Benutzer keinen anderen setzen.</item>
+        <item>This server is operated by the NTP Pool Project (https://www.ntppool.org), which provides free access to well-synchronized NTP servers. Servers hosted by this organization are commonly used as default servers in embedded hardware.
+        Der Server wird vom NTP Pool Project (https://www.ntppool.org) bereitgestellt, welches kostenfreien Zugang zu gut synchronisierten Zeitservern bereitstellt. IOT-Geräte (z.B. Router) verwenden oft einen Server als Werkseinstellung, welcher von dieser Organisation betrieben wird.</item>
+    </string-array>
+    <string name="attempt_to_aquire_permissions">Versuche Berechtigungen dauerhaft zu gewähren (erfordert root)</string>
 </resources>
