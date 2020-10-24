@@ -1,0 +1,4 @@
+~ completed localization for "de"
++ support standard settings API, when access to privileged permissions is granted
++ add proper icon
++ add fallback_url keys used by some ROMs; fixes NCC requests to play.googleapis.com/generate_204 and www.google.com/gen_204

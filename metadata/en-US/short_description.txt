@@ -1,0 +1,1 @@
+GUI to change some privileged Android settings configuring network services
