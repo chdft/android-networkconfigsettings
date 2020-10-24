@@ -2,17 +2,22 @@
 <resources>
     <string-array name="licenses_libraryname">
         <item>Material Icons</item>
+        <item>AndroidX Support Library</item>
     </string-array>
     <string-array name="licenses_licensename">
+        <item>Apache 2.0</item>
         <item>Apache 2.0</item>
     </string-array>
     <string-array name="licenses_licenselink">
         <item>https://github.com/google/material-design-icons/blob/master/LICENSE</item>
+        <item>http://www.apache.org/licenses/LICENSE-2.0</item>
     </string-array>
     <string-array name="licenses_librarylink">
         <item>https://github.com/google/material-design-icons</item>
+        <item>https://developer.android.com/jetpack/androidx/</item>
     </string-array>
     <string-array name="licenses_use">
         <item>Used as basis for the app icon.</item>
+        <item>Used without modifications in accordance with recommendations in the documentation.</item>
     </string-array>
 </resources>
